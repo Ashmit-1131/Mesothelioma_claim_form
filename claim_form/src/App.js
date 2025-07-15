@@ -12,12 +12,12 @@ function App() {
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
         {/* LEFT SECTION */}
-        <div className="lg:w-2/5 flex flex-col gap-6">
+        <div className="lg:w-2/5 flex flex-col justify-between gap-5 h-full">
           {/* Set responsive order here */}
           <div className="order-1 lg:order-2">
             <InfoAlertCard />
           </div>
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 !h-[480px] lg:!h-[420px]">
             <CaseReviewCard />
           </div>
         </div>
