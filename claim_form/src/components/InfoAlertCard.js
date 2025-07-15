@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function InfoAlertCard() {
   return (
-    <div className="bg-[#fef3f2] rounded-2xl shadow-lg p-6">
+    <div className="bg-[#fef3f2] rounded-2xl shadow-lg p-6 ">
       <h3 className="text-lg font-semibold text-[#611a15]">
         Have you or a loved one been affected by Mesothelioma?
       </h3>

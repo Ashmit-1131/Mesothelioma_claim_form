@@ -12,7 +12,7 @@ function App() {
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
         {/* LEFT SECTION */}
-        <div className="lg:w-2/5 flex flex-col justify-between gap-5 h-full">
+        <div className="lg:w-2/5 flex flex-col justify-between gap-8 h-full">
           {/* Set responsive order here */}
           <div className="order-1 lg:order-2">
             <InfoAlertCard />
@@ -23,7 +23,8 @@ function App() {
         </div>
 
         {/* RIGHT SECTION */}
-        <div className="lg:w-3/5 order-3">
+        
+        <div className="lg:w-3/5 order-3 h-full">
           <ClaimForm />
         </div>
       </div>

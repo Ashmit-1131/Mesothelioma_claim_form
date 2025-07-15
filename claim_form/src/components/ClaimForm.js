@@ -45,7 +45,7 @@ const ClaimForm = () => {
   };
 
   return (
-    <div className="bg-blue-900/40 backdrop-blur-md rounded-2xl p-10 shadow-xl w-full">
+    <div className="bg-blue-900/40 backdrop-blur-md rounded-2xl p-10 shadow-xl w-full h-full">
 
       <h2 className="text-2xl text-white font-semibold mb-6">Claim Form</h2>
       <form onSubmit={handleSubmit}>
@@ -90,7 +90,7 @@ const ClaimForm = () => {
               onChange={handleChange} required
               className="mt-1 w-full border-b border-white bg-transparent text-white focus:outline-none"
             />
-            {/* <span className="absolute right-3 top-8 text-white">📅</span> */}
+          
           </div>
           <div>
             <label className="block text-sm text-white">Job Title</label>
@@ -107,7 +107,7 @@ const ClaimForm = () => {
               onChange={handleChange} required
               className="mt-1 w-full border-b border-white bg-transparent text- focus:outline-none"
             />
-            {/* <span className="absolute right-3 top-8 text-grey"></span> */}
+         
           </div>
           <div>
             <label className="block text-sm text-grey">Type of Diagnosis</label>
@@ -137,7 +137,10 @@ const ClaimForm = () => {
         <div className="mt-4">
           <div className="flex items-start space-x-2">
             <input type="checkbox" name="privacy" checked={checkedPrivacy} onChange={handleCheckboxChange} required />
-            <label className="text-xs text-white">I agree to the <a href="#" className="underline">privacy policy</a>.</label>
+            <label className="text-xs text-white">I agree to the and and give my express written
+consent to be contacted regarding my case options. I understand that I may
+be contacted using automatic dialing equipment. Message and data rates
+may apply. My consent does not require purchase. This is Legal advertising. <a href="#" className="underline">privacy policy</a>.</label>
           </div>
           <div className="flex items-start space-x-2 mt-2">
             <input type="checkbox" name="human" checked={checkedHuman} onChange={handleCheckboxChange} required />
@@ -148,9 +151,16 @@ const ClaimForm = () => {
         {status === 'success' && <p className="mt-4 text-green-300">Submitted successfully!</p>}
         {status === 'error' && <p className="mt-4 text-red-300">Submission failed. Please check required fields.</p>}
 
-       <button type="submit" className="mt-6 w-full py-3 bg-white text-black font-semibold rounded-md hover:opacity-90">
-  Start your claim now
+<button
+  type="submit"
+  className="mt-6 w-full py-3 bg-[#e0cba3] text-black font-semibold rounded-lg hover:opacity-90"
+>
+  {/* mobile-only */}
+  <span className="sm:hidden">Submit</span>
+  {/* sm and up */}
+  <span className="hidden sm:inline">Start your claim now</span>
 </button>
+
 
       </form>
     </div>
