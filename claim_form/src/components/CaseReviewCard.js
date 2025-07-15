@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { ShieldCheck, CheckCircle2, BadgeDollarSign } from "lucide-react";
 
 export default function FreeCaseReviewCard() {
   return (
@@ -22,8 +23,8 @@ export default function FreeCaseReviewCard() {
           </defs>
           <text
             fill="white"
-            fontSize="10"
-            fontWeight="medium"
+            fontSize="13"
+            fontWeight="font-medium tracking-wide text-[12px] uppercase"
             textAnchor="middle"
             transform="rotate(-90,50,50)"
           >
@@ -47,7 +48,7 @@ export default function FreeCaseReviewCard() {
 
 
 
-      <div className="absolute w-[45%] z-10 ">
+      <div className="absolute w-[45%] z-10 opacity-70 ">
         <div className="
           relative bg-[#FEF8F1]
           rounded-l-2xl rounded-tr-[5rem] rounded-br-[5rem]
@@ -64,29 +65,38 @@ export default function FreeCaseReviewCard() {
 
           {/* title + subtitle */}
           <div>
-            <h3 className="text-3xl font-bold leading-snug text-black">
-              Free<br />Case<br />Review
+            <h3 className="text-2xl font-bold leading-snug text-black">
+              Free<br/>Case<br/>Review
             </h3>
-            <p className="text-sm text-gray-600 mt-2">
-              We are here to help!
-            </p>
+           <p className="text-sm text-white mt-2 invisible">
+  We are here to help!
+</p>
           </div>
 
           {/* list items */}
-          <ul className="mt-6 space-y-3 text-sm text-gray-800">
-            <li className="flex items-center">
-              <span className="w-2 h-2 rounded-full bg-gray-300 mr-3 inline-block" />
-              100% Confidential
-            </li>
-            <li className="flex items-center">
-              <span className="w-2 h-2 rounded-full bg-gray-100 mr-3 inline-block" />
-              No Win, No Fee
-            </li>
-            <li className="flex items-center">
-              <span className="w-2 h-2 rounded-full bg-amber-500 mr-3 inline-block" />
-              Free Case Evaluation
-            </li>
-          </ul>
+      
+
+<ul className="mt-6 space-y-3 text-sm text-gray-800">
+  <li className="flex items-center">
+    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#dce3ec] ">
+      <ShieldCheck className="w-4 h-4 text-[#4c6179]" />
+    </span>
+    100% Confidential
+  </li>
+  <li className="flex items-center">
+    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#d8d2dd] ">
+      <CheckCircle2 className="w-4 h-4 text-[#5d4f67]" />
+    </span>
+    No Win, No Fee
+  </li>
+  <li className="flex items-center">
+    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#f8e7cd] ">
+      <BadgeDollarSign className="w-4 h-4 text-[#b8860b]" />
+    </span>
+    Free Case Evaluation
+  </li>
+</ul>
+
         </div>
       </div>
 
