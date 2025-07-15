@@ -45,7 +45,8 @@ const ClaimForm = () => {
   };
 
   return (
-    <div className="bg-blue-700/30 backdrop-blur-lg rounded-xl p-8 shadow-lg">
+    <div className="bg-blue-900/40 backdrop-blur-md rounded-2xl p-10 shadow-xl w-full">
+
       <h2 className="text-2xl text-white font-semibold mb-6">Claim Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -89,7 +90,7 @@ const ClaimForm = () => {
               onChange={handleChange} required
               className="mt-1 w-full border-b border-white bg-transparent text-white focus:outline-none"
             />
-            <span className="absolute right-3 top-8 text-white">📅</span>
+            {/* <span className="absolute right-3 top-8 text-white">📅</span> */}
           </div>
           <div>
             <label className="block text-sm text-white">Job Title</label>
@@ -104,16 +105,16 @@ const ClaimForm = () => {
             <input
               type="date" name="diagnosisDate" value={formData.diagnosisDate}
               onChange={handleChange} required
-              className="mt-1 w-full border-b border-white bg-transparent text-white focus:outline-none"
+              className="mt-1 w-full border-b border-white bg-transparent text- focus:outline-none"
             />
-            <span className="absolute right-3 top-8 text-white">📅</span>
+            {/* <span className="absolute right-3 top-8 text-grey"></span> */}
           </div>
           <div>
-            <label className="block text-sm text-white">Type of Diagnosis</label>
+            <label className="block text-sm text-grey">Type of Diagnosis</label>
             <select
               name="diagnosisType" value={formData.diagnosisType}
               onChange={handleChange} required
-              className="mt-1 w-full border-b border-white bg-transparent text-white focus:outline-none"
+              className="mt-1 w-full border-b border-white bg-transparent text-grey focus:outline-none"
             >
               <option value="" disabled>Select...</option>
               <option value="pleural">Pleural Mesothelioma</option>
@@ -147,9 +148,10 @@ const ClaimForm = () => {
         {status === 'success' && <p className="mt-4 text-green-300">Submitted successfully!</p>}
         {status === 'error' && <p className="mt-4 text-red-300">Submission failed. Please check required fields.</p>}
 
-        <button type="submit" className="mt-6 w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700">
-          Submit
-        </button>
+       <button type="submit" className="mt-6 w-full py-3 bg-white text-black font-semibold rounded-md hover:opacity-90">
+  Start your claim now
+</button>
+
       </form>
     </div>
   );
