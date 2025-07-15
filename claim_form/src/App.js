@@ -13,12 +13,17 @@ function App() {
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
         {/* LEFT SECTION */}
         <div className="lg:w-2/5 flex flex-col gap-6">
-          <CaseReviewCard />
-          <InfoAlertCard />
+          {/* Set responsive order here */}
+          <div className="order-1 lg:order-2">
+            <InfoAlertCard />
+          </div>
+          <div className="order-2 lg:order-1">
+            <CaseReviewCard />
+          </div>
         </div>
 
-        {/* RIGHT SECTION: Claim Form */}
-        <div className="lg:w-3/5">
+        {/* RIGHT SECTION */}
+        <div className="lg:w-3/5 order-3">
           <ClaimForm />
         </div>
       </div>
